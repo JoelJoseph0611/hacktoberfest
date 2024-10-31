@@ -1,0 +1,12 @@
+def sum_of_digits(n):
+    # Ensure n is positive
+    n = abs(n)
+    total = 0
+    while n > 0:
+        total += n % 10  # Get the last digit and add to total
+        n //= 10         # Remove the last digit from n
+    return total
+
+# Example usage
+number = 12345
+print(f"The sum of digits of {number} is: {sum_of_digits(number)}")
